@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM java:8
 VOLUME /tmp
-COPY ./target/test-jenkins-0.0.1-SNAPSHOT.jar test-jenkins.jar
+COPY ./target/test-jenkins.jar test-jenkins.jar
 ENTRYPOINT ["java","-jar","/test-jenkins.jar","&"]
